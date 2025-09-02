@@ -1,6 +1,6 @@
 # Spark
 
-**The Problem:** I've always struggled with that moment when I've gotten an idea in the middle of programming and it's not particularly part of the current section I'm writing but related to the project as a whole. I don't like taking notes on paper because because it breaks my flow and I instead try to solve a non-existent problem when serious work is still pending
+**The Problem:** I've always struggled with that moment when I've gotten an idea in the middle of programming and it's not particularly part of the current section I'm writing but related to the project as a whole. I don't like taking notes on paper because it breaks my flow and I instead try to solve a non-existent problem when serious work is still pending
 
 **Coming soon:** A simple tool to help you capture ideas, no matter where you are on your computer, all without breaking your flow.
 
