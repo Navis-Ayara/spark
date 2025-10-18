@@ -1,1 +1,1 @@
-from .helpers import add_spark
+from .app import cli
