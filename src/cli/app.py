@@ -1,6 +1,7 @@
 from .helpers import (create_spark, get_sparks, get_sparks_by_context,
                       edit_spark, delete_spark)
 import click
+from tabulate import tabulate
 
 import os
 
@@ -20,14 +21,19 @@ def add_spark(content):
 @cli.command("list")
 @click.option("--all", is_flag=True)
 def list_sparks(all):
+    sparks = []
     if all:
         for spark in get_sparks():
-            click.echo(f"{spark.id} | {spark.content} | {spark.context}")
+            sparks.append([f"{spark.id}", f"{spark.content}", f"{spark.context}"])
+
+        click.echo(tabulate(sparks, tablefmt="github", headers=["id", "content", "context"]))
     
     else:
         current_directory = os.getcwd()
         for spark in get_sparks_by_context(current_directory):
-            click.echo(f"{spark.id} | {spark.content} | {spark.context}")
+            sparks.append([f"{spark.id}", f"{spark.content}", f"{spark.context}"])
+
+        click.echo(tabulate(sparks, tablefmt="github", headers=["id", "content", "context"]))
 
 @cli.command("edit")
 @click.argument("id")
