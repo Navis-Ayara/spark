@@ -17,7 +17,17 @@ Open PowerShell in the project root and run:
     source .venv/bin/activate # Linux
     ```
 
-2. Run the app:
+2. Run database migrations:
+
+    ```bash
+    cd src/database
+
+    alembic upgrade head
+    ```
+
+3. Run the app:
+
+    In the root directory, run:
 
     ```bash
     python main.py add "new note" # to create a new note
